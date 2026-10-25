@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Canvas Pro | Visual Website Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+<header>
+  <div class="brand-wrap">
+    <button id="menuBtn" class="menu-btn" aria-label="Toggle navigation">☰</button>
+    <div class="brand">◇ <span class="bname">Canvas Pro</span></div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="toolbar-actions">
+    <button id="undo" class="utility-btn">↶</button>
+    <button id="collabStatus" class="collab-pill" title="Sync across tabs">Local sync</button>
+    <select id="zoom" class="mini-select" title="Zoom">
+      <option value="0.5">50%</option>
+      <option value="1" selected>100%</option>
+      <option value="1.5">150%</option>
+      <option value="2">200%</option>
+      <option value="2.5">250%</option>
+      <option value="3">300%</option>
+    </select>
+    <button id="share" class="utility-btn">Share</button>
+    <div class="avatar" aria-label="Current user">R</div>
+    <button class="publish" id="preview">Preview</button>
+  </div>
+</header>
+<main>
+  <aside class="left"><h3>Layers</h3><div id="layers"></div></aside>
+  <section class="stage">
+    <div class="canvas-area"><div class="page"><svg id="svg" viewBox="0 0 900 620"></svg></div></div>
+    <div class="tools" id="tools">
+      <button data-tool="select" title="Move (V)">➤</button>
+      <button data-tool="rect" title="Rectangle (R)">▢</button>
+      <button data-tool="ellipse" title="Ellipse (O)">◯</button>
+      <button data-tool="line" title="Line (L)">╱</button>
+      <button data-tool="pen" title="Draw (P)">✎</button>
+      <button data-tool="text" title="Text (T)">T</button>
+      <button data-tool="button" title="Button (B)">▭</button>
+    </div>
+  </section>
+  <aside class="right"><h3>Design</h3><div id="inspector" class="hint">Pick a tool below, then tap or drag on the canvas.</div></aside>
+</main>
+</div>
+<script src="script.js"></script></body>
+</html>
